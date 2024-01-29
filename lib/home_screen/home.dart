@@ -28,11 +28,18 @@ class _HomeState extends State<Home> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
               child: CupertinoSearchTextField(
-                itemSize: 25,
                 backgroundColor: Colors.white,
-                placeholder: 'Search',
+                itemSize: 25,
                 borderRadius: BorderRadius.circular(30),
                 padding: EdgeInsets.zero,
+                prefixInsets: EdgeInsets.symmetric(horizontal: 12),
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Icon(
+                    CupertinoIcons.search,
+                    color: Color.fromARGB(255, 64, 155, 155),
+                  ),
+                ),
               ),
             ),
           ),

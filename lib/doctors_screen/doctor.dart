@@ -60,6 +60,7 @@ class _DoctorsState extends State<Doctors> {
                 itemSize: 25,
                 borderRadius: BorderRadius.circular(30),
                 padding: EdgeInsets.zero,
+                prefixInsets: EdgeInsets.symmetric(horizontal: 12),
                 prefixIcon: Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Icon(

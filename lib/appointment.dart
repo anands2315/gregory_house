@@ -182,7 +182,8 @@ class _AppointmentState extends State<Appointment> {
                   ),
                 ),
                 Table(
-                  border: TableBorder.all(),
+                  border:
+                      TableBorder.all(borderRadius: BorderRadius.circular(10)),
                   children: [
                     TableRow(
                       children: [
