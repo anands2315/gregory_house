@@ -32,6 +32,7 @@ class CalendarItem extends StatelessWidget {
         DateTime.now().year == date.year;
 
     Color backgroundColor = getMonthColor(date.month);
+    Color datecColor = getDateColor(date);
 
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -70,7 +71,7 @@ class CalendarItem extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 15.0,
                   fontWeight: FontWeight.bold,
-                  color: isToday ? Color.fromARGB(255, 64, 155, 155) : null,
+                  color: datecColor,
                 ),
               ),
             ),
@@ -111,6 +112,21 @@ class CalendarItem extends StatelessWidget {
 
       default:
         return Colors.grey;
+    }
+  }
+
+  Color getDateColor(DateTime date) {
+    if (date.month == DateTime.now().month) {
+      if (date.day == DateTime.now().day) {
+        // Current date of the current month
+        return Color.fromARGB(255, 64, 155, 155); // Blue
+      } else {
+        // Date belongs to the current month but not the current date
+        return Colors.white;
+      }
+    } else {
+      // Date doesn't belong to the current month
+      return Color.fromARGB(255, 64, 155, 155); // Blue
     }
   }
 }
