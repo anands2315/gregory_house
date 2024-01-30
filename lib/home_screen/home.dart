@@ -23,7 +23,9 @@ class _HomeState extends State<Home> {
       body: Column(
         children: [
           Container(
-            decoration: BoxDecoration(color: Color.fromARGB(255, 64, 155, 155)),
+            decoration: BoxDecoration(
+                color: Color.fromARGB(255, 64, 155, 155),
+                boxShadow: [BoxShadow()]),
             height: 60,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),

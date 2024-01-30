@@ -187,7 +187,7 @@ class _DoctorsState extends State<Doctors> {
       children: [
         CircleAvatar(
           backgroundImage: AssetImage("assets/images/images.jpg"),
-          radius: 33,
+          radius: 35,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -273,18 +273,22 @@ class _DoctorsState extends State<Doctors> {
                     color: const Color.fromARGB(255, 176, 174, 174),
                     fontSize: 12),
               ),
-              Text(
-                "\$${totalFee}",
-                style: TextStyle(fontWeight: FontWeight.bold),
+              FittedBox(
+                child: Text(
+                  "\$${totalFee}",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
             ],
           ),
           Spacer(),
           ElevatedButton(
             onPressed: () {},
-            child: Text(
-              "Make an appointment",
-              style: TextStyle(fontSize: 15),
+            child: FittedBox(
+              child: Text(
+                "Make an appointment",
+                style: TextStyle(fontSize: 17),
+              ),
             ),
             style: ElevatedButton.styleFrom(
                 elevation: 8,

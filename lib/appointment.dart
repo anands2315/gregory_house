@@ -9,7 +9,9 @@ class Appointment extends StatefulWidget {
 }
 
 class _AppointmentState extends State<Appointment> {
-  int _value = 1;
+  // int _value = 1;
+  bool image = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -188,58 +190,75 @@ class _AppointmentState extends State<Appointment> {
                     TableRow(
                       children: [
                         TableCell(
-                          child: Row(
-                            children: [
-                              Radio(
-                                value: 1,
-                                groupValue: _value,
-                                onChanged: (value) {
-                                  setState(
-                                    () {
-                                      _value = value ?? 0;
-                                    },
-                                  );
-                                },
-                                activeColor: Color.fromARGB(255, 64, 155, 155),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 10),
+                            child: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  image = !image;
+                                });
+                              },
+                              child: Container(
+                                child: Row(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundImage: AssetImage(image
+                                          ? "assets/images/selected_image.jpg"
+                                          : "assets/images/unselected_image.png"),
+                                      radius: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "PayPal",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              Text(
-                                "PayPal",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
+                            ),
                           ),
                         ),
-                        // TableCell(child: Text("PayPal")),
                       ],
                     ),
                     TableRow(
                       children: [
                         TableCell(
-                          child: Row(
-                            children: [
-                              Radio(
-                                value: 2,
-                                groupValue: _value,
-                                onChanged: (value) {
-                                  setState(
-                                    () {
-                                      _value = value ?? 0;
-                                    },
-                                  );
-                                },
-                                activeColor: Color.fromARGB(255, 64, 155, 155),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 10),
+                            child: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  image = !image;
+                                });
+                              },
+                              child: Container(
+                                child: Row(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundImage: AssetImage(image
+                                          ? "assets/images/unselected_image.png"
+                                          : "assets/images/selected_image.jpg"),
+                                      radius: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Credit Card",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              Text(
-                                "Credit Card",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold),
-                              )
-                            ],
+                            ),
                           ),
                         ),
                         // TableCell(child: Text("Credit Card")),
@@ -281,7 +300,7 @@ class _AppointmentState extends State<Appointment> {
       children: [
         CircleAvatar(
           backgroundImage: AssetImage("assets/images/images.jpg"),
-          radius: 33,
+          radius: 35,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),

@@ -29,39 +29,44 @@ class DailyReport extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Row(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Symptoms of covid to watch out\nfor",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  Text(
-                    "March 06, 09:01 PM",
-                    style: TextStyle(color: Colors.grey, fontSize: 13),
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                ],
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Container(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    "assets/images/ss.png",
-                    width: 140,
-                    height: 125,
-                    fit: BoxFit.fitWidth,
+          child: Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Symptoms of covid to watch out for",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
+                      Text(
+                        "March 06, 09:01 PM",
+                        style: TextStyle(color: Colors.grey, fontSize: 13),
+                      ),
+                      SizedBox(
+                        height: 50,
+                      ),
+                    ],
                   ),
                 ),
-              ),
-            ],
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      "assets/images/ss.png",
+                      width: 140,
+                      height: 125,
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         SizedBox(
@@ -71,25 +76,24 @@ class DailyReport extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Row(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Symptoms of covid to watch out",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  Text(
-                    "for",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  Text(
-                    "March 06, 09:01 PM",
-                    style: TextStyle(color: Colors.grey, fontSize: 13),
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Symptoms of covid to watch out for",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                    ),
+                    Text(
+                      "March 06, 09:01 PM",
+                      style: TextStyle(color: Colors.grey, fontSize: 13),
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 width: 10,
