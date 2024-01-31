@@ -13,6 +13,12 @@ class Doctors extends StatefulWidget {
 class _DoctorsState extends State<Doctors> {
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
+    print("h = ${height}");
+    print("h = ${width}");
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 64, 155, 155),
@@ -273,28 +279,30 @@ class _DoctorsState extends State<Doctors> {
                     color: const Color.fromARGB(255, 176, 174, 174),
                     fontSize: 12),
               ),
-              FittedBox(
-                child: Text(
-                  "\$${totalFee}",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+              Text(
+                "\$${totalFee}",
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
           ),
           Spacer(),
-          ElevatedButton(
-            onPressed: () {},
-            child: FittedBox(
-              child: Text(
-                "Make an appointment",
-                style: TextStyle(fontSize: 17),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.06,
+            width: MediaQuery.of(context).size.width * 0.71,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: FittedBox(
+                child: Text(
+                  "Make an appointment",
+                  style: TextStyle(fontSize: 17),
+                ),
               ),
+              style: ElevatedButton.styleFrom(
+                  elevation: 8,
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.amber[700],
+                  fixedSize: Size(290, 55)),
             ),
-            style: ElevatedButton.styleFrom(
-                elevation: 8,
-                foregroundColor: Colors.white,
-                backgroundColor: Colors.amber[700],
-                fixedSize: Size(290, 55)),
           ),
         ],
       ),

@@ -29,44 +29,42 @@ class DailyReport extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Symptoms of covid to watch out for",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15),
-                      ),
-                      Text(
-                        "March 06, 09:01 PM",
-                        style: TextStyle(color: Colors.grey, fontSize: 13),
-                      ),
-                      SizedBox(
-                        height: 50,
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      "assets/images/ss.png",
-                      width: 140,
-                      height: 125,
-                      fit: BoxFit.fitWidth,
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Symptoms of covid to watch out for",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                     ),
+                    Text(
+                      "March 06, 09:01 PM",
+                      style: TextStyle(color: Colors.grey, fontSize: 13),
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Container(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    "assets/images/ss.png",
+                    width: MediaQuery.of(context).size.width * 0.33,
+                    height: MediaQuery.of(context).size.height * 0.14,
+                    fit: BoxFit.fill,
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
         SizedBox(
@@ -103,9 +101,9 @@ class DailyReport extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
                     "assets/images/ss.png",
-                    width: 140,
-                    height: 125,
-                    fit: BoxFit.fitWidth,
+                    width: MediaQuery.of(context).size.width * 0.33,
+                    height: MediaQuery.of(context).size.height * 0.14,
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),

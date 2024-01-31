@@ -7,7 +7,7 @@ class Calendar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(color: Color.fromARGB(255, 64, 155, 155)),
-      height: 100.0,
+      height: MediaQuery.of(context).size.height * 0.12,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 365,
